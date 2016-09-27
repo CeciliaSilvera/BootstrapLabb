@@ -1,0 +1,55 @@
+﻿
+<div class="row">
+    <div class="col-md-12 col-md-offset-2">
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h2 ng-bind="title "class="display-4">Hello, world!</h2>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, dolor nusquam facilisi no sit. Diam cetero explicari qui cu. In sea aliquando persequeris, nullam adipisci evertitur mea te. Has sint diceret nusquam cu, ius explicari incorrupte interpretaris no. Mei iisque dissentiunt at, id suas perfecto argumentum vis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, dolor nusquam facilisi no sit. Diam cetero explicari qui cu. In sea aliquando persequeris, nullam adipisci evertitur mea te. Has sint diceret nusquam cu, ius explicari incorrupte interpretaris no. Mei iisque dissentiunt at, id suas perfecto argumentum vis.
+                </p>
+                <blockquote class="blockquote-reverse">
+                    <address>
+                        <strong>HomePage, AB.</strong><br>
+                        1355 Market Street, Suite 900<br>
+                        San Francisco, CA 94103<br>
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                    </address>
+
+                    <address>
+                        <strong>Full Name</strong><br>
+                        <a href="mailto:#">first.last@example.com</a>
+                    </address>
+                </blockquote>
+                <hr class="m-y-2">
+
+                    <form>
+                        <label for="title">Name</label>
+                        <input type="text" id="title" ng-model="newPost.title" />
+                        <label for="body">Comment</label>
+                        <input type="text" id="body" ng-model="newPost.body" />
+                        <button type="button" ng-click="addPost()">Leave a comment</button>
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-md-offset-2">
+        <hr class="m-y-2 col-md-8">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-md-offset-1">
+        <div class="col-md-2 post" ng-repeat="post in posts track by $index">
+            <h4 ng-bind="post.title +' says:'"></h4>
+            <p ng-bind="post.body"></p>
+            <span ng-click="delete($index)" id="delete-button" class="glyphicon glyphicon-trash pull-right"></span>
+
+            
+        </div>
+    </div>
+</div>

@@ -1,1 +1,14 @@
 ﻿@import url('../Content/bootstrap.min.css');
+
+.jumbotron > p {
+    font-size: 14px;
+}
+p.lead{
+    font-size: 21px;
+}
+.post{
+    font-style:italic;
+}
+.glyphicon:hover{
+    cursor:pointer;
+}
